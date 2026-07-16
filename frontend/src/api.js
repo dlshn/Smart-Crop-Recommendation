@@ -12,11 +12,11 @@ export async function fetchCrops() {
   return res.json();
 }
 
-export async function fetchRecommendations({ district, month, crops, topN = 3 }) {
+export async function fetchRecommendations({ district, month, crops, lang = "en" }) {
   const res = await fetch(`${API_BASE}/recommend`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ district, month, crops, topN }),
+    body: JSON.stringify({ district, month, crops, lang }),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));

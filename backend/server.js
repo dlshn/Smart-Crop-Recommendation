@@ -25,6 +25,10 @@ mongoose
   })
   .catch((err) => {
     console.error("MongoDB connection failed:", err.message);
-    console.error("Did you run 'node scripts/seed.js' and start mongod first?");
+    console.error(
+      "Check your MONGO_URI in .env (Atlas connection string, username/password, " +
+      "and that your IP is whitelisted in Atlas Network Access). " +
+      "Also make sure you ran 'npm run seed' at least once."
+    );
     process.exit(1);
   });

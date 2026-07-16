@@ -1,3 +1,82 @@
+# Smart Crop Recommendation
+
+Smart Crop Recommendation is a lightweight, explainable system that recommends crops based on soil, weather, and farmer constraints.
+
+## Overview
+- Purpose: Help farmers choose appropriate crops for a plot by combining historical data, simple ML models, and human-readable explanations.
+- Platform: Web app with a React frontend and Node.js backend (see `frontend/` and `backend/`).
+
+## Key Features
+- Input form for soil parameters, location, season, budget and preferences.
+- Ranked crop recommendations with confidence and expected yield range.
+- Explainability: per-recommendation feature contributions (SHAP/LIME style) and plain-language reasoning.
+- Save scenarios, export results, and collect feedback for model improvement.
+
+## Repo Structure
+- `backend/` — Node.js API, model-serving stubs, and seed scripts.
+- `frontend/` — Vite + React UI components for inputs and results.
+- `data/` — sample datasets and `dataset.csv` used for prototyping.
+
+## Quick start (local)
+Requirements: Node.js (16+ recommended), npm.
+
+1. Install backend dependencies and seed sample data
+
+```bash
+cd backend
+npm install
+npm run seed
+npm start
+```
+
+2. Install and run frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the app at the port shown by Vite (default `http://localhost:5173`).
+
+## API (core)
+- `POST /recommend` — Accepts JSON input (soil features, location, season, preferences). Returns ranked crops, confidence scores, and explanation payload (feature contributions and textual reasons).
+- `GET /metadata` — Supported crops, feature ranges, and model version.
+- `POST /feedback` — Collects user feedback to improve future models.
+
+See `backend/routes/api.js` for implementation details.
+
+## Model & Explainability
+- Prototype uses a tree-based model (LightGBM/XGBoost) for tabular performance.
+- Explainability: use SHAP for local feature contributions and partial dependence / global importance for broader insights.
+- Safety rules: apply rule-based checks (e.g., exclude crops when pH/range constraints fail) and show clear warnings.
+
+## Data & Preprocessing
+- Use `data/dataset.csv` (or external agronomy datasets) with fields for soil, weather, and historical yield.
+- Steps: validate → impute missing values → feature engineering (rolling weather stats, categorical encodings) → train/test splits by region/season.
+
+## Testing & Evaluation
+- Offline metrics: MAE/RMSE for yield prediction or classification metrics for suitability tasks.
+- Monitor model drift and data distribution changes in production.
+
+## Deployment & Ops
+- Containerize with Docker; optionally orchestrate with Kubernetes for scale.
+- CI/CD: lint, unit tests, model validation, and staged rollout (canary).
+
+## Security & Privacy
+- Encrypt data in transit and at rest for any PII.
+- Log only necessary request fields; anonymize logs used for model training.
+
+## Roadmap / Next Steps
+1. Train a baseline model on `data/dataset.csv` and wire it into `POST /recommend`.
+2. Add SHAP-based explanation payload and visualizations in the frontend.
+3. Run a small pilot with real users and collect feedback.
+
+## Contributing
+Open issues and PRs are welcome. Please add tests for new endpoints and model changes.
+
+---
+If you want, I can flesh this out into a longer developer README with runbooks, Dockerfiles, and API examples. Which should I do next?
 # Smart Crop Recommendation System — MERN Stack
 
 This is the MERN (MongoDB, Express, React, Node) version of the system.
