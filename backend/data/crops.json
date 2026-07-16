@@ -2,8 +2,139 @@
   {
     "crop": "Asiatic Pennywort",
     "soilTypes": [
+      "Moist Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Matale",
+      "Matara",
+      "Nuwara Eliya",
+      "Ratnapura"
+    ],
+    "harvestType": "short",
+    "harvestDays": 100,
+    "category": "vegetable",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-gotukola: first harvest ~100 days from planting."
+  },
+  {
+    "crop": "Avocado",
+    "soilTypes": [
+      "Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Matale",
+      "Matara",
+      "Nuwara Eliya",
+      "Ratnapura"
+    ],
+    "harvestType": "long",
+    "harvestDays": 240,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~8 months from flowering to fruit maturity."
+  },
+  {
+    "crop": "Banana",
+    "soilTypes": [
       "Loam",
+      "Alluvial"
+    ],
+    "districts": [
+      "Ampara",
+      "Anuradhapura",
+      "Badulla",
+      "Batticaloa",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Hambantota",
+      "Jaffna",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Kilinochchi",
+      "Kurunegala",
+      "Mannar",
+      "Matale",
+      "Matara",
+      "Monaragala",
+      "Mullaitivu",
+      "Nuwara Eliya",
+      "Polonnaruwa",
+      "Puttalam",
+      "Ratnapura",
+      "Trincomalee",
+      "Vavuniya"
+    ],
+    "harvestType": "long",
+    "harvestDays": 300,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~9-11 months from planting to bunch maturity."
+  },
+  {
+    "crop": "Beetroot",
+    "soilTypes": [
       "Sandy Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Kandy",
+      "Matale",
+      "Nuwara Eliya"
+    ],
+    "harvestType": "short",
+    "harvestDays": 90,
+    "category": "vegetable",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical upcountry root-vegetable cycle, 85-100 days."
+  },
+  {
+    "crop": "Beli Fruit",
+    "soilTypes": [
+      "Sandy Loam",
+      "Poor/Dry Soils"
+    ],
+    "districts": [
+      "Ampara",
+      "Anuradhapura",
+      "Badulla",
+      "Batticaloa",
+      "Hambantota",
+      "Jaffna",
+      "Kandy",
+      "Kilinochchi",
+      "Kurunegala",
+      "Mannar",
+      "Matale",
+      "Monaragala",
+      "Mullaitivu",
+      "Nuwara Eliya",
+      "Polonnaruwa",
+      "Puttalam",
+      "Trincomalee",
+      "Vavuniya"
+    ],
+    "harvestType": "long",
+    "harvestDays": 300,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] bael fruit is notably slow-ripening, ~10+ months after fruit set."
+  },
+  {
+    "crop": "Bitter Melon",
+    "soilTypes": [
+      "Sandy Loam",
+      "Loam"
     ],
     "districts": [
       "Ampara",
@@ -35,240 +166,26 @@
     "harvestType": "short",
     "harvestDays": 60,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Avocado",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Banana",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Beetroot",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 90,
-    "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Beli Fruit",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "long",
-    "harvestDays": 240,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Bitter Melon",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] bitter gourd/melon first harvest ~55-70 days from sowing, consistent with DOA Luffa (related cucurbit) at 60-70 days."
   },
   {
     "crop": "Breadfruit",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Clay Loam"
+      "Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
-      "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
-    "harvestType": "short",
-    "harvestDays": 120,
+    "harvestType": "long",
+    "harvestDays": 105,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~3.5 months from flowering to maturity."
   },
   {
     "crop": "Brinjal",
@@ -304,208 +221,142 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 120,
+    "harvestDays": 75,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-brinjal: harvest starts 10-12 weeks (70-84 days) after transplanting."
   },
   {
     "crop": "Cabbage",
     "soilTypes": [
       "Loam",
-      "Sandy Loam"
+      "Fertile Soil"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 120,
+    "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-cabbage: harvest 90-110 days after planting."
   },
   {
     "crop": "Carrot",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Sandy Loam",
+      "Loose/Deep Soil"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 90,
+    "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-variety-carrot: medium-maturity variety ~110 days; faster local varieties ~90 days."
   },
   {
     "crop": "Custard Apple",
     "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Alluvial"
+      "Poor/Dry Soils"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
       "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
       "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
       "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
-    "harvestType": "short",
+    "harvestType": "long",
     "harvestDays": 120,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4 months from fruit set to maturity."
   },
   {
     "crop": "Drumsticks",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Sandy Loam",
+      "Poor/Dry Soils"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
       "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
       "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
       "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
-    "harvestType": "short",
-    "harvestDays": 120,
+    "harvestType": "long",
+    "harvestDays": 210,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] Moringa tree, first pod harvest typically 6-7 months (180-210 days) after planting."
   },
   {
     "crop": "Gooseberry",
     "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Alluvial"
+      "Poor/Dry Soils"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
       "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
       "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
       "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
-    "harvestType": "short",
-    "harvestDays": 120,
+    "harvestType": "long",
+    "harvestDays": 90,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] nelli fruit matures relatively quickly, ~3 months from flowering."
   },
   {
     "crop": "Guava",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
-      "Alluvial"
+      "Sandy Loam"
     ],
     "districts": [
       "Ampara",
@@ -535,124 +386,65 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 150,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity."
   },
   {
     "crop": "Jackfruit",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
       "Clay Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
       "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
       "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
-    "harvestType": "short",
-    "harvestDays": 110,
+    "harvestType": "long",
+    "harvestDays": 120,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4 months fruit development; re-classified from 'short' -- jackfruit is a multi-year tree crop, not a fast annual."
   },
   {
     "crop": "Knol-Khol",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 120,
+    "harvestDays": 70,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast-maturing brassica root crop, typically 60-70 days."
   },
   {
     "crop": "Leeks",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 110,
+    "harvestDays": 135,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-leeks: harvest about 4.5 months (~135 days) after transplanting."
   },
   {
     "crop": "Long Purple Eggplant",
@@ -688,522 +480,341 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 120,
+    "harvestDays": 75,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] same species/family as Brinjal, doa.gov.lk/hordi-crop-brinjal figure applied."
   },
   {
     "crop": "Mango",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
-      "Alluvial"
+      "Laterite"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
       "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
       "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
       "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 120,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity."
   },
   {
     "crop": "Mangosteen",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
-      "Alluvial"
+      "High Organic Matter"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
-      "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 105,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~90-120 days from flowering to maturity."
   },
   {
     "crop": "Manioc",
     "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Clay Loam"
+      "Poor/Dry Soils"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
       "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
       "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
       "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
       "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
-    "harvestType": "short",
-    "harvestDays": 90,
+    "harvestType": "long",
+    "harvestDays": 300,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-variety-cassava: harvested at 9-12 months age; lower-mid estimate used."
   },
   {
     "crop": "Onion",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 90,
-    "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Orange",
-    "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
+      "Loam"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
-      "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
-      "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
-      "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "long",
-    "harvestDays": 240,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Papaya",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Passion Fruit",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Pennywort",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 60,
-    "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Pineapple",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 120,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Pomegranate",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "long",
-    "harvestDays": 240,
-    "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Potato",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Clay Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
-    ],
-    "harvestType": "short",
-    "harvestDays": 90,
-    "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
-  },
-  {
-    "crop": "Pumpkin",
-    "soilTypes": [
-      "Loam",
-      "Sandy Loam"
-    ],
-    "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
-      "Hambantota",
-      "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
-      "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
     "harvestType": "short",
     "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical big/red onion bulb maturation, 90-110 days."
+  },
+  {
+    "crop": "Orange",
+    "soilTypes": [
+      "Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Kandy",
+      "Matale",
+      "Nuwara Eliya"
+    ],
+    "harvestType": "long",
+    "harvestDays": 210,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] citrus is notably slow to mature, ~7 months from flowering."
+  },
+  {
+    "crop": "Papaya",
+    "soilTypes": [
+      "Sandy Loam"
+    ],
+    "districts": [
+      "Ampara",
+      "Anuradhapura",
+      "Badulla",
+      "Batticaloa",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Hambantota",
+      "Jaffna",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Kilinochchi",
+      "Kurunegala",
+      "Mannar",
+      "Matale",
+      "Matara",
+      "Monaragala",
+      "Mullaitivu",
+      "Nuwara Eliya",
+      "Polonnaruwa",
+      "Puttalam",
+      "Ratnapura",
+      "Trincomalee",
+      "Vavuniya"
+    ],
+    "harvestType": "long",
+    "harvestDays": 270,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~9 months from planting to first fruit maturity; re-classified from 'short' -- papaya is a semi-perennial crop, not a fast annual."
+  },
+  {
+    "crop": "Passion Fruit",
+    "soilTypes": [
+      "Sandy Loam",
+      "Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Matale",
+      "Matara",
+      "Nuwara Eliya",
+      "Ratnapura"
+    ],
+    "harvestType": "long",
+    "harvestDays": 80,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~10-12 weeks from flowering to fruit maturity."
+  },
+  {
+    "crop": "Pennywort",
+    "soilTypes": [
+      "Moist Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Matale",
+      "Matara",
+      "Nuwara Eliya",
+      "Ratnapura"
+    ],
+    "harvestType": "short",
+    "harvestDays": 100,
+    "category": "vegetable",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-gotukola: first harvest ~100 days from planting."
+  },
+  {
+    "crop": "Pineapple",
+    "soilTypes": [
+      "Sandy Loam"
+    ],
+    "districts": [
+      "Badulla",
+      "Colombo",
+      "Galle",
+      "Gampaha",
+      "Kalutara",
+      "Kandy",
+      "Kegalle",
+      "Matale",
+      "Matara",
+      "Nuwara Eliya",
+      "Ratnapura"
+    ],
+    "harvestType": "long",
+    "harvestDays": 450,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~15 months from planting to first harvest; re-classified from 'short' -- pineapple has an unusually long single cycle among the crops in this dataset."
+  },
+  {
+    "crop": "Pomegranate",
+    "soilTypes": [
+      "Sandy Loam",
+      "Saline-Tolerant"
+    ],
+    "districts": [
+      "Ampara",
+      "Anuradhapura",
+      "Batticaloa",
+      "Hambantota",
+      "Jaffna",
+      "Kilinochchi",
+      "Kurunegala",
+      "Mannar",
+      "Monaragala",
+      "Mullaitivu",
+      "Polonnaruwa",
+      "Puttalam",
+      "Trincomalee",
+      "Vavuniya"
+    ],
+    "harvestType": "long",
+    "harvestDays": 165,
+    "category": "fruit",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~5-6 months from flowering to maturity."
+  },
+  {
+    "crop": "Potato",
+    "soilTypes": [
+      "Loam",
+      "Loose/Deep Soil"
+    ],
+    "districts": [
+      "Badulla",
+      "Kandy",
+      "Matale",
+      "Nuwara Eliya"
+    ],
+    "harvestType": "short",
+    "harvestDays": 100,
+    "category": "vegetable",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical upcountry potato cycle, 90-110 days."
+  },
+  {
+    "crop": "Pumpkin",
+    "soilTypes": [
+      "Sandy Loam",
+      "Loam"
+    ],
+    "districts": [
+      "Ampara",
+      "Anuradhapura",
+      "Badulla",
+      "Batticaloa",
+      "Hambantota",
+      "Jaffna",
+      "Kandy",
+      "Kilinochchi",
+      "Kurunegala",
+      "Mannar",
+      "Matale",
+      "Monaragala",
+      "Mullaitivu",
+      "Nuwara Eliya",
+      "Polonnaruwa",
+      "Puttalam",
+      "Trincomalee",
+      "Vavuniya"
+    ],
+    "harvestType": "short",
+    "harvestDays": 100,
+    "category": "vegetable",
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical cucurbit maturation, 90-120 days."
   },
   {
     "crop": "Rambutan",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
+      "High Organic Matter"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
-      "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
-      "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
-      "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
-      "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 110,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~100-120 days from flowering to maturity."
   },
   {
     "crop": "Red Spinach",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Moist Loam"
     ],
     "districts": [
       "Ampara",
@@ -1233,205 +844,131 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 60,
+    "harvestDays": 30,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast leafy green (mukunuwenna/amaranth), 25-35 days."
   },
   {
     "crop": "Rose Apple",
     "soilTypes": [
       "Loam",
-      "Sandy Loam",
-      "Alluvial",
       "Clay Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
       "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
       "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 75,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast-maturing among tree fruits, ~60-90 days from flowering."
   },
   {
     "crop": "Soursop",
     "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
+      "Loam"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
       "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
       "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 135,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from fruit set to maturity."
   },
   {
     "crop": "Taro",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam",
-      "Clay Loam"
+      "Clay Loam",
+      "Wet/Waterlogged Tolerant"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
       "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
       "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
-    "harvestType": "short",
-    "harvestDays": 90,
+    "harvestType": "long",
+    "harvestDays": 210,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] Kiri Ala corm crop, typically 6-7 months (180-210 days) to maturity."
   },
   {
     "crop": "Winged Bean",
     "soilTypes": [
       "Loam",
-      "Sandy Loam"
+      "Moisture-Retentive"
     ],
     "districts": [
-      "Ampara",
-      "Anuradhapura",
       "Badulla",
-      "Batticaloa",
       "Colombo",
       "Galle",
       "Gampaha",
-      "Hambantota",
-      "Jaffna",
       "Kalutara",
       "Kandy",
       "Kegalle",
-      "Kilinochchi",
-      "Kurunegala",
-      "Mannar",
       "Matale",
       "Matara",
-      "Monaragala",
-      "Mullaitivu",
       "Nuwara Eliya",
-      "Polonnaruwa",
-      "Puttalam",
-      "Ratnapura",
-      "Trincomalee",
-      "Vavuniya"
+      "Ratnapura"
     ],
     "harvestType": "short",
-    "harvestDays": 120,
+    "harvestDays": 85,
     "category": "vegetable",
-    "notes": "Validated from dataset as vegetable crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-winged-bean: recommended varieties 70-75 days, common local varieties 90-100 days."
   },
   {
     "crop": "Wood Apple",
     "soilTypes": [
-      "Loam",
       "Sandy Loam",
-      "Alluvial",
-      "Clay Loam"
+      "Poor/Dry Soils"
     ],
     "districts": [
       "Ampara",
       "Anuradhapura",
-      "Badulla",
       "Batticaloa",
-      "Colombo",
-      "Galle",
-      "Gampaha",
       "Hambantota",
       "Jaffna",
-      "Kalutara",
-      "Kandy",
-      "Kegalle",
       "Kilinochchi",
       "Kurunegala",
       "Mannar",
-      "Matale",
-      "Matara",
       "Monaragala",
       "Mullaitivu",
-      "Nuwara Eliya",
       "Polonnaruwa",
       "Puttalam",
-      "Ratnapura",
       "Trincomalee",
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": 300,
     "category": "fruit",
-    "notes": "Validated from dataset as fruit crop with district support and typical soil preferences. Supports 25 districts from the dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] notably slow-ripening like Beli Fruit, ~10+ months."
   }
 ]

@@ -17,7 +17,7 @@ export default function RecommendationForm({
 
   return (
     <form
-      className="rounded-[24px] border border-leaf/15 bg-white p-7 shadow-soft transition-shadow duration-300 hover:shadow-lg"
+      className="rounded-none border border-leaf/15 bg-white p-7 shadow-soft transition-shadow duration-300 hover:shadow-lg"
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit();
@@ -70,7 +70,7 @@ export default function RecommendationForm({
 
       <div className="mt-7">
         <span className="text-sm font-medium text-ink/70">
-          Candidate crops (leave empty to consider all {crops.length})
+          Candidate crops (leave empty to consider all crops)
         </span>
         <p className="mt-1 text-sm text-ink/40">Choose a few crops to compare or leave the selection open for a broader view.</p>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -78,7 +78,7 @@ export default function RecommendationForm({
             <button
               type="button"
               key={c}
-              className={`rounded-full border px-3 py-2 text-sm transition ${selectedCrops.includes(c)
+              className={`rounded-xl  border px-3 py-2 text-sm transition ${selectedCrops.includes(c)
                 ? "border-leaf bg-leaf text-white shadow-sm"
                 : "border-leaf/15 bg-cream text-ink/70 hover:border-leaf/40 hover:text-leaf"}`}
               onClick={() => toggleCrop(c)}

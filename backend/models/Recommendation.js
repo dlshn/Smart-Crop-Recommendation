@@ -15,7 +15,7 @@ const recommendationSchema = new mongoose.Schema({
   finalScore: Number,
 });
 
-// Compound index for the main query pattern (district + month lookup)
-recommendationSchema.index({ district: 1, month: 1 });
+// Compound index for the main query pattern (district + month + crop lookup)
+recommendationSchema.index({ district: 1, month: 1, crop: 1 });
 
 module.exports = mongoose.model("Recommendation", recommendationSchema);

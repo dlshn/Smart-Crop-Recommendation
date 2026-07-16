@@ -20,17 +20,26 @@ _MODEL_CACHE = {}
 
 
 def load_data():
+    """Loads dataset.csv and reshapes it into a long format with one row
+    per (date, district, crop) -- covering BOTH fruit and vegetable
+    commodities. The raw file has separate fruit_Commodity/fruit_Price
+    and vegitable_Commodity/vegitable_Price column pairs on the same row
+    (both sharing the same Date/Region/Temperature/Rainfall/Humidity);
+    melting them into a single crop/price pair means every crop --
+    fruit or vegetable -- gets its own real price history instead of
+    vegetables silently falling back to fruit-only data.
+    """
     global _DATA_CACHE
     if _DATA_CACHE is not None:
         return _DATA_CACHE
 
     # read with latin1 to be tolerant of degree symbol encodings
-    df = pd.read_csv(DATA_PATH, encoding='latin1', low_memory=False)
-    df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
-    df = df.dropna(subset=['Date', 'Region'])
-    df['district'] = df['Region'].str.strip()
-    df['month'] = df['Date'].dt.month
-    df['day_of_year'] = df['Date'].dt.dayofyear
+    raw = pd.read_csv(DATA_PATH, encoding='latin1', low_memory=False)
+    raw['Date'] = pd.to_datetime(raw['Date'], errors='coerce')
+    raw = raw.dropna(subset=['Date', 'Region'])
+    raw['district'] = raw['Region'].str.strip()
+    raw['month'] = raw['Date'].dt.month
+    raw['day_of_year'] = raw['Date'].dt.dayofyear
 
     # Robust column detection: headers may include odd characters for ° (degree)
     def find_col(cols, keywords):
@@ -40,44 +49,64 @@ def load_data():
                     return c
         return None
 
-    cols = df.columns.tolist()
+    cols = raw.columns.tolist()
     temp_col = find_col(cols, ['temperature', 'temp', '°c', 'c)'])
     rain_col = find_col(cols, ['rainfall', 'rain'])
     hum_col = find_col(cols, ['humidity', 'humid'])
-    price_col = find_col(cols, ['fruit_price', 'fruit price', 'price per unit', 'price'])
+    fruit_crop_col = find_col(cols, ['fruit_commodity', 'fruit commodity'])
+    fruit_price_col = find_col(cols, ['fruit_price', 'fruit price'])
+    veg_crop_col = find_col(cols, ['vegitable_commodity', 'vegetable_commodity', 'vegitable commodity', 'vegetable commodity'])
+    veg_price_col = find_col(cols, ['vegitable_price', 'vegetable_price', 'vegitable price', 'vegetable price'])
 
-    if temp_col is None or rain_col is None or hum_col is None or price_col is None:
-        raise RuntimeError(f"Required columns not found. Detected columns: {cols}")
+    if temp_col is None or rain_col is None or hum_col is None:
+        raise RuntimeError(f"Required weather columns not found. Detected columns: {cols}")
+    if fruit_crop_col is None or fruit_price_col is None:
+        raise RuntimeError(f"Fruit commodity/price columns not found. Detected columns: {cols}")
 
-    df['temperature'] = pd.to_numeric(df[temp_col], errors='coerce')
-    df['rainfall_mm'] = pd.to_numeric(df[rain_col], errors='coerce')
-    df['humidity'] = pd.to_numeric(df[hum_col], errors='coerce')
-    df['price'] = pd.to_numeric(df[price_col], errors='coerce')
+    raw['temperature'] = pd.to_numeric(raw[temp_col], errors='coerce')
+    raw['rainfall'] = pd.to_numeric(raw[rain_col], errors='coerce')
+    raw['humidity'] = pd.to_numeric(raw[hum_col], errors='coerce')
 
-    if 'rainfall' not in df.columns:
-        df['rainfall'] = df['rainfall_mm']
+    shared_cols = ['district', 'month', 'day_of_year', 'temperature', 'rainfall', 'humidity']
 
-    _DATA_CACHE = df.dropna(subset=['temperature', 'rainfall', 'humidity', 'price'])
+    fruit_part = raw[shared_cols + [fruit_crop_col, fruit_price_col]].rename(
+        columns={fruit_crop_col: 'crop', fruit_price_col: 'price'}
+    )
+
+    parts = [fruit_part]
+
+    if veg_crop_col is not None and veg_price_col is not None:
+        veg_part = raw[shared_cols + [veg_crop_col, veg_price_col]].rename(
+            columns={veg_crop_col: 'crop', veg_price_col: 'price'}
+        )
+        parts.append(veg_part)
+    else:
+        print(
+            'WARNING: vegetable commodity/price columns not found in dataset.csv -- '
+            'vegetable crops will have no real price history and will fall back to '
+            'the shared all-crops (fruit-only) model. Detected columns:', cols
+        )
+
+    long_df = pd.concat(parts, ignore_index=True)
+    long_df['crop'] = long_df['crop'].astype(str).str.strip()
+    long_df['price'] = pd.to_numeric(long_df['price'], errors='coerce')
+
+    _DATA_CACHE = long_df.dropna(subset=['temperature', 'rainfall', 'humidity', 'price', 'crop'])
     return _DATA_CACHE
 
 
 def train_price_model(crop=None):
     df = load_data()
-    if 'fruit_Commodity' not in df.columns:
-        raise RuntimeError('fruit_Commodity column is required for crop-aware training')
 
     if crop:
-        df = df[df['fruit_Commodity'].astype(str).str.lower() == str(crop).strip().lower()]
-    else:
-        df = df[df['fruit_Commodity'].isin(df['fruit_Commodity'].dropna().unique())]
+        df = df[df['crop'].str.lower() == str(crop).strip().lower()]
+    # else: keep all rows (all crops) for the shared fallback model
 
     if df.empty:
         raise RuntimeError(f'No data found for crop: {crop}')
 
-    df = df.rename(columns={'fruit_Commodity': 'crop'})
+    df = df.copy()
     df['price'] = df['price'].fillna(df['price'].median())
-    if 'rainfall' not in df.columns:
-        df['rainfall'] = df['rainfall_mm']
 
     X = df[['district', 'month', 'day_of_year', 'temperature', 'rainfall', 'humidity']]
     X = pd.get_dummies(X, columns=['district', 'month'], drop_first=True)
@@ -122,11 +151,9 @@ def load_model(crop=None):
         try:
             result = train_price_model(crop=crop)
         except Exception:
-            # No dataset rows for this crop (e.g. a vegetable that isn't in
-            # the fruit price dataset). Reuse the single shared all-crops
-            # model instead of training a brand new one for every distinct
-            # crop name that misses - that was causing many full-dataset
-            # RandomForest trainings to run at once and time out callers.
+            # No dataset rows for this crop. Reuse the single shared
+            # all-crops model instead of training a brand new one for
+            # every distinct crop name that misses.
             if model_name == 'all':
                 raise
             result = load_model(crop=None)
@@ -150,10 +177,8 @@ def predict_price(district, planting_date, crop=None):
     X = pd.DataFrame([features])
     X = pd.get_dummies(X, columns=['district', 'month'], drop_first=True)
     df_train = load_data()
-    if 'rainfall' not in df_train.columns and 'rainfall_mm' in df_train.columns:
-        df_train['rainfall'] = df_train['rainfall_mm']
     if crop:
-        crop_df = df_train[df_train['fruit_Commodity'].astype(str).str.lower() == str(crop).strip().lower()]
+        crop_df = df_train[df_train['crop'].str.lower() == str(crop).strip().lower()]
         if crop_df.empty:
             crop_df = df_train
     else:
@@ -198,8 +223,16 @@ def get_crop_info(crop=None, harvest_days=None, harvest_type=None, soil_types=No
 
 
 def get_crop_price_mean(district, crop):
+    """Returns this crop's OWN historical average price in this district
+    -- a distinct, individually-computed value per crop (not a single
+    shared value reused across all crops). Used by app.py to decide
+    whether a crop's predicted future price is above its own normal
+    baseline."""
     df = load_data()
-    crop_df = df[(df['district'].str.lower() == str(district).strip().lower()) & (df['fruit_Commodity'].astype(str).str.lower() == str(crop).strip().lower())]
+    crop_df = df[
+        (df['district'].str.lower() == str(district).strip().lower()) &
+        (df['crop'].str.lower() == str(crop).strip().lower())
+    ]
     if crop_df.empty:
         return None
     return float(crop_df['price'].mean())

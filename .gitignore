@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 backend/models/*.joblib
 frontend/dist/
+data/dataset.csv
