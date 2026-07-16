@@ -17,8 +17,25 @@ app.get("/", (req, res) => {
   res.json({ status: "Smart Crop Recommendation API is running" });
 });
 
+mongoose.connection.on("disconnected", () => {
+  console.warn("MongoDB connection lost, mongoose will attempt to reconnect...");
+});
+mongoose.connection.on("reconnected", () => {
+  console.log("MongoDB reconnected");
+});
+mongoose.connection.on("error", (err) => {
+  console.error("MongoDB connection error:", err.message);
+});
+
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URI, {
+    // Atlas SRV lookups can resolve IPv6 hosts that some Windows networks
+    // can't complete a TLS handshake with, causing intermittent
+    // "socket disconnected before secure TLS connection was established"
+    // errors. Forcing IPv4 avoids that path.
+    family: 4,
+    serverSelectionTimeoutMS: 15000,
+  })
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

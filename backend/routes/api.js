@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const path = require("path");
 const Crop = require("../models/Crop");
+const Recommendation = require("../models/Recommendation");
 
 const meta = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "meta.json"), "utf-8")
@@ -62,45 +63,59 @@ router.post("/recommend", async (req, res) => {
     const shortCrops = allCrops.filter((item) => item.harvestType === "short");
     const longCrops = allCrops.filter((item) => item.harvestType === "long");
 
-    const candidateResults = [];
-    for (const crop of shortCrops) {
-      const payload = {
-        district,
-        crop: crop.crop,
-        plantingDate: plantingDate.toISOString().slice(0, 10),
-        language: lang,
-        harvestDays: crop.harvestDays,
-        harvestType: crop.harvestType,
-        soilTypes: crop.soilTypes,
-      };
-      const prediction = await callPriceService(payload);
-      candidateResults.push({ crop: crop.crop, metadata: crop, prediction });
-    }
+    const zoneLookup = new Map(
+      (
+        await Recommendation.find({
+          district,
+          month: Number(month),
+          crop: { $in: shortCrops.map((c) => c.crop) },
+        }).lean()
+      ).map((r) => [r.crop, r])
+    );
+
+    const candidateResults = await Promise.all(
+      shortCrops.map(async (crop) => {
+        const payload = {
+          district,
+          crop: crop.crop,
+          plantingDate: plantingDate.toISOString().slice(0, 10),
+          language: lang,
+          harvestDays: crop.harvestDays,
+          harvestType: crop.harvestType,
+          soilTypes: crop.soilTypes,
+        };
+        const prediction = await callPriceService(payload);
+        return { crop: crop.crop, metadata: crop, prediction, zoneInfo: zoneLookup.get(crop.crop) };
+      })
+    );
+
+    const buildResult = (item) => ({
+      ...item.prediction,
+      crop: item.crop,
+      suitableSoilTypes: item.metadata.soilTypes,
+      harvestDays: item.metadata.harvestDays,
+      zone: item.zoneInfo?.zone ?? null,
+      zoneMatch: item.zoneInfo?.zoneMatch ?? "Unknown",
+      rainfallBand: item.zoneInfo?.rainfallBand ?? item.prediction.rainfallRange,
+      suitabilityScore: item.zoneInfo?.suitabilityScore ?? null,
+      riskScore: item.zoneInfo?.riskScore ?? null,
+      finalScore: item.zoneInfo?.finalScore ?? null,
+    });
 
     const recommended = candidateResults
       .filter((item) => item.prediction.profitAboveMean)
       .sort((a, b) => b.prediction.predictedPriceLkr - a.prediction.predictedPriceLkr)
-      .map((item) => ({
-        ...item.prediction,
-        crop: item.crop,
-        suitableSoilTypes: item.metadata.soilTypes,
-        harvestDays: item.metadata.harvestDays,
-      }))
+      .map(buildResult)
       .slice(0, 3);
 
     const fallbackRecommended = candidateResults
       .sort((a, b) => b.prediction.predictedPriceLkr - a.prediction.predictedPriceLkr)
-      .map((item) => ({
-        ...item.prediction,
-        crop: item.crop,
-        suitableSoilTypes: item.metadata.soilTypes,
-        harvestDays: item.metadata.harvestDays,
-      }))
+      .map(buildResult)
       .slice(0, 3);
 
     const recommendedCrops = recommended.length > 0 ? recommended : fallbackRecommended;
     const meanPrice =
-      recommendedCrops.reduce((sum, item) => sum + item.prediction.predictedPriceLkr, 0) /
+      recommendedCrops.reduce((sum, item) => sum + item.predictedPriceLkr, 0) /
       Math.max(recommendedCrops.length, 1);
 
     const longTermCrops = longCrops.map((crop) => ({

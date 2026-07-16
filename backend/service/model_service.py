@@ -1,4 +1,5 @@
 import os
+import threading
 from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
@@ -11,12 +12,18 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # dataset.csv is located at the repository root `data/`, not under backend/service/
 DATA_PATH = os.path.join(BASE_DIR, '..', '..', 'data', 'dataset.csv')
 MODEL_DIR = os.path.join(BASE_DIR, '..', 'models')
-MODEL_FILE = os.path.join(MODEL_DIR, 'price_model.joblib')
 
 FEATURES = ['district', 'month', 'day_of_year', 'temperature', 'rainfall', 'humidity']
 
+_DATA_CACHE = None
+_MODEL_CACHE = {}
+
 
 def load_data():
+    global _DATA_CACHE
+    if _DATA_CACHE is not None:
+        return _DATA_CACHE
+
     # read with latin1 to be tolerant of degree symbol encodings
     df = pd.read_csv(DATA_PATH, encoding='latin1', low_memory=False)
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
@@ -50,7 +57,8 @@ def load_data():
     if 'rainfall' not in df.columns:
         df['rainfall'] = df['rainfall_mm']
 
-    return df.dropna(subset=['temperature', 'rainfall', 'humidity', 'price'])
+    _DATA_CACHE = df.dropna(subset=['temperature', 'rainfall', 'humidity', 'price'])
+    return _DATA_CACHE
 
 
 def train_price_model(crop=None):
@@ -82,27 +90,49 @@ def train_price_model(crop=None):
     mse = mean_squared_error(y_test, preds)
     rmse = float(np.sqrt(mse))
     os.makedirs(MODEL_DIR, exist_ok=True)
-    model_path = os.path.join(MODEL_DIR, f'price_model_{str(crop).lower().replace(" ", "_") or "all"}.joblib')
+    model_name = str(crop).lower().replace(' ', '_') if crop else 'all'
+    model_path = os.path.join(MODEL_DIR, f'price_model_{model_name}.joblib')
     joblib.dump(model, model_path)
     print(f'Model trained for {crop or "all crops"}. RMSE:', rmse)
     return model, model_path
 
 
+_MODEL_LOCK = threading.RLock()
+
+
 def load_model(crop=None):
     model_name = str(crop).lower().replace(' ', '_') if crop else 'all'
-    model_path = os.path.join(MODEL_DIR, f'price_model_{model_name}.joblib')
-    if os.path.exists(model_path):
-        try:
-            return joblib.load(model_path), model_path
-        except Exception:
-            os.remove(model_path)
+    if model_name in _MODEL_CACHE:
+        return _MODEL_CACHE[model_name]
 
-    try:
-        model, path = train_price_model(crop=crop)
-        return model, path
-    except Exception:
-        fallback_model, fallback_path = train_price_model(crop=None)
-        return fallback_model, fallback_path
+    with _MODEL_LOCK:
+        # Another thread may have populated this while we waited for the lock.
+        if model_name in _MODEL_CACHE:
+            return _MODEL_CACHE[model_name]
+
+        model_path = os.path.join(MODEL_DIR, f'price_model_{model_name}.joblib')
+        if os.path.exists(model_path):
+            try:
+                result = joblib.load(model_path), model_path
+                _MODEL_CACHE[model_name] = result
+                return result
+            except Exception:
+                os.remove(model_path)
+
+        try:
+            result = train_price_model(crop=crop)
+        except Exception:
+            # No dataset rows for this crop (e.g. a vegetable that isn't in
+            # the fruit price dataset). Reuse the single shared all-crops
+            # model instead of training a brand new one for every distinct
+            # crop name that misses - that was causing many full-dataset
+            # RandomForest trainings to run at once and time out callers.
+            if model_name == 'all':
+                raise
+            result = load_model(crop=None)
+
+        _MODEL_CACHE[model_name] = result
+        return result
 
 
 def predict_price(district, planting_date, crop=None):
