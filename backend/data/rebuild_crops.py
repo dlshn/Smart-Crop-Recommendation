@@ -14,6 +14,23 @@ Rebuilds backend/data/crops.json with defensible, non-fabricated data:
 This uses the SAME zone methodology already used to generate
 backend/data/recommendations.json, so the two datasets stay consistent
 with each other.
+
+HONEST LIMITATION (checked against web sources, 2026-09): Sri Lanka's
+official Wet/Intermediate/Dry zone classification (Land and Water Use
+Division, Dept. of Agriculture, Peredeniya, 1979) is defined by rainfall
+isohyets and terrain, NOT by district boundaries -- the Wet Zone, for
+example, "covers the south-western region including the central hill
+country", cutting across districts rather than following their borders.
+Several districts genuinely straddle more than one zone in reality
+(e.g. Kandy, Kurunegala, Ratnapura, Monaragala, Nuwara Eliya, Puttalam,
+Hambantota all contain areas of more than one zone). DISTRICT_ZONE below
+assigns each WHOLE district to a single dominant zone as a practical,
+disclosed simplification -- it is NOT a per-division/per-farm-accurate
+mapping, and no single official "list of districts per crop" document
+exists to validate this against more precisely. This is the same
+district-level granularity limitation the project thesis (Section 5.3)
+already discusses for rainfall data; it applies equally here. Do not
+present this district list as more precise than it is.
 """
 import json
 
@@ -69,48 +86,52 @@ CROP_SUITABLE_ZONES = {
     "Manioc": ["Dry", "Intermediate"],
 }
 
-# Differentiated soil-texture preference per crop, based on common
-# horticultural knowledge (well-drained vs moisture-retentive, sandy vs
-# clay-rich, pH tolerance where relevant to texture selection).
-CROP_SOIL_TYPES = {
-    "Banana": ["Loam", "Alluvial"],
-    "Papaya": ["Sandy Loam"],
-    "Mango": ["Loam", "Laterite"],
-    "Pineapple": ["Sandy Loam"],
-    "Wood Apple": ["Sandy Loam", "Poor/Dry Soils"],
-    "Beli Fruit": ["Sandy Loam", "Poor/Dry Soils"],
-    "Guava": ["Loam", "Sandy Loam"],
-    "Passion Fruit": ["Sandy Loam", "Loam"],
-    "Rambutan": ["Loam", "High Organic Matter"],
-    "Mangosteen": ["Loam", "High Organic Matter"],
-    "Avocado": ["Loam"],
-    "Rose Apple": ["Loam", "Clay Loam"],
-    "Soursop": ["Sandy Loam", "Loam"],
-    "Custard Apple": ["Sandy Loam", "Poor/Dry Soils"],
-    "Gooseberry": ["Sandy Loam", "Poor/Dry Soils"],
-    "Pomegranate": ["Sandy Loam", "Saline-Tolerant"],
-    "Orange": ["Loam"],
-    "Winged Bean": ["Loam", "Moisture-Retentive"],
-    "Bitter Melon": ["Sandy Loam", "Loam"],
-    "Brinjal": ["Loam", "Sandy Loam"],
-    "Long Purple Eggplant": ["Loam", "Sandy Loam"],
-    "Asiatic Pennywort": ["Moist Loam"],
-    "Pennywort": ["Moist Loam"],
-    "Red Spinach": ["Moist Loam"],
-    "Leeks": ["Loam"],
-    "Carrot": ["Sandy Loam", "Loose/Deep Soil"],
-    "Beetroot": ["Sandy Loam"],
-    "Cabbage": ["Loam", "Fertile Soil"],
-    "Knol-Khol": ["Loam"],
-    "Pumpkin": ["Sandy Loam", "Loam"],
-    "Onion": ["Sandy Loam", "Loam"],
-    "Potato": ["Loam", "Loose/Deep Soil"],
-    "Drumsticks": ["Sandy Loam", "Poor/Dry Soils"],
-    "Jackfruit": ["Loam", "Clay Loam"],
-    "Breadfruit": ["Loam"],
-    "Taro": ["Clay Loam", "Wet/Waterlogged Tolerant"],
-    "Manioc": ["Sandy Loam", "Poor/Dry Soils"],
+# Soil type per crop: the FULL set of real Sri Lankan Great Soil Groups
+# documented for each zone the crop grows in (Dept. of Agriculture /
+# Land Use Division's 14 nationally-recognised groups -- checked live
+# 2026-09), NOT narrowed to one "dominant" group per zone (an earlier
+# version of this file did that; the project owner asked for the full
+# set instead, since a district can't be resolved to just one of a
+# zone's several real soil groups without finer, sub-district survey
+# data). A crop spanning more than one zone gets the UNION of those
+# zones' groups, derived directly from CROP_SUITABLE_ZONES above so the
+# two never drift out of sync.
+#
+#   Dry Zone (10 groups): Reddish Brown Earths (largest area), Low
+#   Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols,
+#   Alluvial Soils (river flood plains), Soils of the Old Alluvium,
+#   Solodized Solonetz (arid areas), Regosols (coastal areas),
+#   Grumusols, Rendzinas (small extents).
+#
+#   Wet Zone (4 groups): Red-Yellow Podzolic Soils (dominant), Reddish
+#   Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils
+#   (tidal marshes).
+#
+#   Intermediate Zone: documented as "a transition from reddish brown
+#   earths to red yellow podzolic soils", so it contributes both of
+#   those plus Immature Brown Loams (the upcountry vegetable-belt
+#   group: Nuwara Eliya / Badulla / Matale).
+ZONE_SOIL_GROUPS = {
+    "Dry": [
+        "Reddish Brown Earths", "Low Humic Gley Soils", "Non-Calcic Brown Soils",
+        "Red-Yellow Latosols", "Alluvial Soils", "Soils of the Old Alluvium",
+        "Solodized Solonetz", "Regosols", "Grumusols", "Rendzinas",
+    ],
+    "Wet": [
+        "Red-Yellow Podzolic Soils", "Reddish Brown Latosolic Soils",
+        "Immature Brown Loams", "Bog and Half-Bog Soils",
+    ],
+    "Intermediate": ["Reddish Brown Earths", "Red-Yellow Podzolic Soils", "Immature Brown Loams"],
 }
+
+
+def soil_groups_for_zones(zones):
+    groups = []
+    for z in zones:
+        for g in ZONE_SOIL_GROUPS[z]:
+            if g not in groups:
+                groups.append(g)
+    return groups
 
 
 def main():
@@ -120,10 +141,9 @@ def main():
     for crop in crops:
         name = crop["crop"]
         zones = CROP_SUITABLE_ZONES.get(name)
-        soils = CROP_SOIL_TYPES.get(name)
 
-        if zones is None or soils is None:
-            raise ValueError(f"No verified zone/soil data for crop: {name}")
+        if zones is None:
+            raise ValueError(f"No verified zone data for crop: {name}")
 
         suitable_districts = sorted(
             d for d, z in DISTRICT_ZONE.items() if z in zones
@@ -132,13 +152,24 @@ def main():
             raise ValueError(f"Zero districts matched for crop: {name} (zones={zones})")
 
         crop["districts"] = suitable_districts
-        crop["soilTypes"] = soils
+        crop["soilTypes"] = soil_groups_for_zones(zones)
         crop["notes"] = (
             f"Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry "
             f"agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), "
             f"matched to this crop's typical growing zone(s): {', '.join(zones)}. "
-            f"Soil type preferences based on common horticultural texture "
-            f"requirements for this crop."
+            f"Soil type: ALL real Sri Lankan Great Soil Groups documented for "
+            f"this crop's zone(s) (not narrowed to one dominant group per "
+            f"zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: "
+            f"Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown "
+            f"Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old "
+            f"Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. "
+            f"Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown "
+            f"Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. "
+            f"Intermediate Zone (a documented transition between Reddish "
+            f"Brown Earths and Red-Yellow Podzolic Soils) additionally "
+            f"carries Immature Brown Loams for the upcountry belt. A crop "
+            f"spanning more than one zone lists the union of those zones' "
+            f"groups."
         )
 
     with open("backend/data/crops.json", "w", encoding="utf-8") as f:

@@ -2,7 +2,10 @@
   {
     "crop": "Asiatic Pennywort",
     "soilTypes": [
-      "Moist Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Bog and Half-Bog Soils"
     ],
     "districts": [
       "Badulla",
@@ -20,12 +23,15 @@
     "harvestType": "short",
     "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-gotukola: first harvest ~100 days from planting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-gotukola: \"First harvest can be obtained within 100 days from the date of planting.\" Re-confirmed live; value unchanged. NOTE: this entry and \"Pennywort\" elsewhere in this file are the same plant (gotukola / Centella asiatica) duplicated under two English names -- flagged for the project owner to merge or rename. [SOIL-VALIDATED 2026-09] gotukola is a moisture-loving Wet/Intermediate Zone herb; removed Reddish Brown Earths (a Dry Zone soil not matched to this crop's actual growing districts). Bog and Half-Bog Soils retained because gotukola genuinely tolerates moist/marshy conditions (judgment call)."
   },
   {
     "crop": "Avocado",
     "soilTypes": [
-      "Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -41,15 +47,24 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 240,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~8 months from flowering to fruit maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~8 months from flowering to fruit maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] avocado is highly intolerant of waterlogging (Phytophthora root rot); removed Bog and Half-Bog Soils (poorly drained/marshy), which does not genuinely suit avocado despite being present in its Wet Zone."
   },
   {
     "crop": "Banana",
     "soilTypes": [
-      "Loam",
-      "Alluvial"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Low Humic Gley Soils",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -79,14 +94,16 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 300,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~9-11 months from planting to bunch maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~9-11 months from planting to bunch maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] banana needs constant soil moisture but good drainage and is salt-sensitive; removed Solodized Solonetz (saline/alkaline), Grumusols (heavy cracking clay, poor drainage for the corm), and Bog and Half-Bog Soils (permanently waterlogged). Alluvial Soils (banana's classic riverine soil) and Low Humic Gley Soils (moist valley-bottom soils banana tolerates reasonably well) retained -- the latter is a judgment call."
   },
   {
     "crop": "Beetroot",
     "soilTypes": [
-      "Sandy Loam"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -95,15 +112,25 @@
       "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 90,
+    "harvestDays": 83,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical upcountry root-vegetable cycle, 85-100 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-beet-root: \"Crop can be harvest 75-90 days after transplanting.\" Value corrected from an earlier unverified 90-day estimate to the 75-90 day midpoint."
   },
   {
     "crop": "Beli Fruit",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Low Humic Gley Soils",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Grumusols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -126,15 +153,23 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 300,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] bael fruit is notably slow-ripening, ~10+ months after fruit set."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] bael fruit is notably slow-ripening, ~10+ months after fruit set. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] bael (Aegle marmelos) is documented in agroforestry literature as one of the most soil-tolerant fruit trees, genuinely growing on saline-alkaline, shallow/calcareous, and heavy clay soils in addition to typical Dry Zone soils; existing soilTypes list retained in full -- judgment call, recommend human review given the unusual breadth."
   },
   {
     "crop": "Bitter Melon",
     "soilTypes": [
-      "Sandy Loam",
-      "Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -164,14 +199,16 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 60,
+    "harvestDays": 68,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] bitter gourd/melon first harvest ~55-70 days from sowing, consistent with DOA Luffa (related cucurbit) at 60-70 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/sinhala-hordi-crop-bitter-gourd (Sinhala page): first harvest obtained at 60-75 days after planting. Corrected from an unverified 60-day estimate (which had only been an analogy to the related crop Luffa) to the verified 60-75 day midpoint. [SOIL-VALIDATED 2026-09] bitter melon (a cucurbit vine) needs well-drained soil and is sensitive to waterlogging; removed Bog and Half-Bog Soils and Low Humic Gley Soils (both poorly drained/waterlogged), Solodized Solonetz (saline), and Grumusols (heavy cracking clay, poor root-zone drainage)."
   },
   {
     "crop": "Breadfruit",
     "soilTypes": [
-      "Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Colombo",
@@ -183,15 +220,23 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 105,
+    "harvestDays": null,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~3.5 months from flowering to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~3.5 months from flowering to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] breadfruit needs good soil drainage and does not tolerate standing water despite growing in the high-rainfall Wet Zone; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Brinjal",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -223,13 +268,14 @@
     "harvestType": "short",
     "harvestDays": 75,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-brinjal: harvest starts 10-12 weeks (70-84 days) after transplanting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-brinjal: \"Harvesting can be started 10-12 weeks after transplanting.\" Re-confirmed live; value unchanged (75 days, within the 70-84 day range). [SOIL-VALIDATED 2026-09] brinjal/eggplant needs well-drained fertile soil and is sensitive to waterlogging; removed Bog and Half-Bog Soils and Low Humic Gley Soils (poorly drained/waterlogged), Solodized Solonetz (saline), and Grumusols (heavy cracking clay, poor drainage)."
   },
   {
     "crop": "Cabbage",
     "soilTypes": [
-      "Loam",
-      "Fertile Soil"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -240,13 +286,14 @@
     "harvestType": "short",
     "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-cabbage: harvest 90-110 days after planting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-cabbage: \"90-110 days after planting.\" Re-confirmed live; value unchanged (100 days, the midpoint)."
   },
   {
     "crop": "Carrot",
     "soilTypes": [
-      "Sandy Loam",
-      "Loose/Deep Soil"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -255,15 +302,22 @@
       "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 100,
+    "harvestDays": 110,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-variety-carrot: medium-maturity variety ~110 days; faster local varieties ~90 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-variety-carrot: New Kuroda variety, \"harvest 110 days after planting.\" (The other listed variety, Lanka Carrot, reaches 90 days to FLOWERING, not harvest -- the earlier note wrongly cited that 90 days as a faster harvest time; value corrected from 100 to the verified 110.)"
   },
   {
     "crop": "Custard Apple",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -286,15 +340,22 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 120,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4 months from fruit set to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~4 months from fruit set to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] custard apple prefers well-drained soil and dislikes waterlogging; removed Low Humic Gley Soils (waterlogged), Solodized Solonetz (salt-sensitive), and Grumusols (heavy cracking clay, poor drainage)."
   },
   {
     "crop": "Drumsticks",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -317,15 +378,24 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 210,
+    "harvestDays": null,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] Moringa tree, first pod harvest typically 6-7 months (180-210 days) after planting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] Moringa tree, first pod harvest typically 6-7 months (180-210 days) after planting. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] moringa is a drought-tolerant tree that is nonetheless very intolerant of waterlogging (rapid root rot in wet soil); removed Low Humic Gley Soils (waterlogged), Grumusols (heavy cracking clay, poor drainage), and Solodized Solonetz (saline -- judgment call, moringa has only marginal documented salt tolerance)."
   },
   {
     "crop": "Gooseberry",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Grumusols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -348,15 +418,26 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 90,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] nelli fruit matures relatively quickly, ~3 months from flowering."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] nelli fruit matures relatively quickly, ~3 months from flowering. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] amla/nelli (Phyllanthus emblica) is documented in agroforestry literature as unusually tolerant of poor, clayey, and alkaline soils (used for degraded/wasteland-soil reclamation), so Grumusols and Solodized Solonetz were retained -- judgment call, recommend human review. Only Low Humic Gley Soils (permanently waterlogged) was removed, since amla still needs adequate drainage."
   },
   {
     "crop": "Guava",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Low Humic Gley Soils",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Grumusols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -386,15 +467,17 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 150,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] guava is documented as tolerant of a wide range of soils, including moderately saline/alkaline and heavy clay soils, so most groups were retained -- judgment call, recommend human review. Only Bog and Half-Bog Soils (permanently waterlogged/marshy) was removed, since even guava's above-average flood tolerance does not extend to standing water."
   },
   {
     "crop": "Jackfruit",
     "soilTypes": [
-      "Loam",
-      "Clay Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -410,14 +493,16 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 120,
+    "harvestDays": null,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4 months fruit development; re-classified from 'short' -- jackfruit is a multi-year tree crop, not a fast annual."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~4 months fruit development; re-classified from 'short' -- jackfruit is a multi-year tree crop, not a fast annual. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] jackfruit needs good soil drainage and does not tolerate standing water despite its Wet/Intermediate Zone rainfall needs; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Knol-Khol",
     "soilTypes": [
-      "Loam"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -426,14 +511,16 @@
       "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 70,
+    "harvestDays": 55,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast-maturing brassica root crop, typically 60-70 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-knol-khol: \"around 50-60 days after transplant.\" Value corrected from an inaccurate earlier estimate of 70 days (60-70 day range) to the verified 50-60 day midpoint."
   },
   {
     "crop": "Leeks",
     "soilTypes": [
-      "Loam"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -444,13 +531,21 @@
     "harvestType": "short",
     "harvestDays": 135,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-leeks: harvest about 4.5 months (~135 days) after transplanting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-leeks: \"about 4 1/2 months after transplanting.\" Re-confirmed live; value unchanged (135 days)."
   },
   {
     "crop": "Long Purple Eggplant",
     "soilTypes": [
-      "Loam",
-      "Sandy Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -482,13 +577,21 @@
     "harvestType": "short",
     "harvestDays": 75,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] same species/family as Brinjal, doa.gov.lk/hordi-crop-brinjal figure applied."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA] same species/family as Brinjal, doa.gov.lk/hordi-crop-brinjal figure applied. [SOIL-VALIDATED 2026-09] same species as Brinjal (eggplant); needs well-drained fertile soil and is sensitive to waterlogging. Removed Bog and Half-Bog Soils and Low Humic Gley Soils (poorly drained/waterlogged), Solodized Solonetz (saline), and Grumusols (heavy cracking clay, poor drainage), matching the Brinjal correction."
   },
   {
     "crop": "Mango",
     "soilTypes": [
-      "Loam",
-      "Laterite"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -511,15 +614,16 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 120,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~4-5 months from flowering to fruit maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] mango is highly intolerant of waterlogging (root asphyxiation) and of heavy cracking clay; removed Low Humic Gley Soils and Grumusols. Solodized Solonetz retained since mango has documented moderate salt tolerance (judgment call)."
   },
   {
     "crop": "Mangosteen",
     "soilTypes": [
-      "Loam",
-      "High Organic Matter"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Colombo",
@@ -531,15 +635,22 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 105,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~90-120 days from flowering to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~90-120 days from flowering to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] mangosteen is notoriously fussy: it needs deep, moist, humus-rich, well-drained Wet Zone soil and is intolerant of waterlogging despite its high rainfall requirement; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Manioc",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -562,15 +673,20 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 300,
+    "harvestDays": null,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-variety-cassava: harvested at 9-12 months age; lower-mid estimate used."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-variety-cassava: most varieties (Shani, Suranimala, Suwarne, HORDI Mu-01, Mu 51, HORDI 06) \"Age 9-12 month\"; Kirikawadi 6-12 months. Re-confirmed live; value unchanged (300 days, a lower-mid estimate within the 270-360 day range). Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] cassava tolerates poor/marginal soils but needs adequate drainage to avoid tuber rot; removed Low Humic Gley Soils (waterlogged), Solodized Solonetz (salt-sensitive), and Grumusols (heavy cracking clay, poor drainage for tuber development)."
   },
   {
     "crop": "Onion",
     "soilTypes": [
-      "Sandy Loam",
-      "Loam"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -589,14 +705,16 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 100,
+    "harvestDays": 88,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical big/red onion bulb maturation, 90-110 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/field-crops-bigonion-si (Sinhala page): \"approximately 85-90 days after transplanting, the harvest can be collected\"; most varieties harvested in 85-100 days. Corrected from a partially-checked 85-day estimate (the earlier English page was unpopulated) to the 85-90 day midpoint, now with a direct DOA quote. [SOIL-VALIDATED 2026-09] onion needs well-drained soil for bulb formation and is salinity-sensitive; removed Low Humic Gley Soils (waterlogged), Solodized Solonetz (saline), and Grumusols (heavy clay, poor bulb development). Regosols and Rendzinas retained as these genuinely match the reddish/calcareous soils of Sri Lanka's main onion-growing area (Jaffna peninsula)."
   },
   {
     "crop": "Orange",
     "soilTypes": [
-      "Loam"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -605,14 +723,23 @@
       "Nuwara Eliya"
     ],
     "harvestType": "long",
-    "harvestDays": 210,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] citrus is notably slow to mature, ~7 months from flowering."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] citrus is notably slow to mature, ~7 months from flowering. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months)."
   },
   {
     "crop": "Papaya",
     "soilTypes": [
-      "Sandy Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -641,16 +768,18 @@
       "Trincomalee",
       "Vavuniya"
     ],
-    "harvestType": "long",
+    "harvestType": "short",
     "harvestDays": 270,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~9 months from planting to first fruit maturity; re-classified from 'short' -- papaya is a semi-perennial crop, not a fast annual."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~9 months from planting to first fruit maturity; re-classified from 'short' -- papaya is a semi-perennial crop, not a fast annual. [SOIL-VALIDATED 2026-09] papaya is extremely sensitive to waterlogging (rapid root rot) and to soil salinity; removed Bog and Half-Bog Soils, Low Humic Gley Soils, Grumusols, and Solodized Solonetz."
   },
   {
     "crop": "Passion Fruit",
     "soilTypes": [
-      "Sandy Loam",
-      "Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -666,14 +795,17 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 80,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~10-12 weeks from flowering to fruit maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~10-12 weeks from flowering to fruit maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] passion fruit prefers well-drained fertile soil and dislikes waterlogging; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Pennywort",
     "soilTypes": [
-      "Moist Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Bog and Half-Bog Soils"
     ],
     "districts": [
       "Badulla",
@@ -691,12 +823,15 @@
     "harvestType": "short",
     "harvestDays": 100,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-gotukola: first harvest ~100 days from planting."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-gotukola: \"First harvest can be obtained within 100 days from the date of planting.\" Re-confirmed live; value unchanged. NOTE: this entry and \"Pennywort\" elsewhere in this file are the same plant (gotukola / Centella asiatica) duplicated under two English names -- flagged for the project owner to merge or rename. [SOIL-VALIDATED 2026-09] gotukola is a moisture-loving Wet/Intermediate Zone herb; removed Reddish Brown Earths (a Dry Zone soil not matched to this crop's actual growing districts). Bog and Half-Bog Soils retained because gotukola genuinely tolerates moist/marshy conditions (judgment call). (Duplicate entry of Asiatic Pennywort / gotukola -- see that entry's flag about the project owner merging these.)"
   },
   {
     "crop": "Pineapple",
     "soilTypes": [
-      "Sandy Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -712,15 +847,21 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 450,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~15 months from planting to first harvest; re-classified from 'short' -- pineapple has an unusually long single cycle among the crops in this dataset."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~15 months from planting to first harvest; re-classified from 'short' -- pineapple has an unusually long single cycle among the crops in this dataset. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] pineapple is notably tolerant of poor, sandy, acidic soils but is very sensitive to waterlogging and needs excellent drainage (it is commonly grown on sandy Regosols); removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Pomegranate",
     "soilTypes": [
-      "Sandy Loam",
-      "Saline-Tolerant"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -739,15 +880,16 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 165,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~5-6 months from flowering to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~5-6 months from flowering to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] pomegranate is drought-hardy and documented as salt-tolerant (Solodized Solonetz retained), but dislikes waterlogged or heavy cracking clay soils; removed Low Humic Gley Soils and Grumusols."
   },
   {
     "crop": "Potato",
     "soilTypes": [
-      "Loam",
-      "Loose/Deep Soil"
+      "Reddish Brown Earths",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Badulla",
@@ -756,15 +898,22 @@
       "Nuwara Eliya"
     ],
     "harvestType": "short",
-    "harvestDays": 100,
+    "harvestDays": 105,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical upcountry potato cycle, 90-110 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-variety-potato: Golden Star variety, \"days to maturity 100-110 days\" (medium maturity). Value corrected from an unverified 100-day estimate to the 100-110 day midpoint."
   },
   {
     "crop": "Pumpkin",
     "soilTypes": [
-      "Sandy Loam",
-      "Loam"
+      "Reddish Brown Earths",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas",
+      "Red-Yellow Podzolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Ampara",
@@ -787,15 +936,16 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 100,
+    "harvestDays": 78,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] typical cucurbit maturation, 90-120 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-variety-pumpkin: Pathma variety, \"Maturity for consumption - 75-80 days.\" Corrected from a 100-day composite estimate (previously built only from days-after-FLOWERING figures by variety) to the verified 75-80 day midpoint, a direct days-from-planting DOA figure. [SOIL-VALIDATED 2026-09] pumpkin is a fairly hardy vine but prefers well-drained soil; removed Low Humic Gley Soils (waterlogged), Solodized Solonetz (saline), and Grumusols (heavy cracking clay, poor drainage for the root zone)."
   },
   {
     "crop": "Rambutan",
     "soilTypes": [
-      "Loam",
-      "High Organic Matter"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams"
     ],
     "districts": [
       "Colombo",
@@ -807,14 +957,25 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 110,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~100-120 days from flowering to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~100-120 days from flowering to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] rambutan needs deep, moist, well-drained Wet Zone soil and, like mangosteen, is intolerant of waterlogging despite its high rainfall requirement; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Red Spinach",
     "soilTypes": [
-      "Moist Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Bog and Half-Bog Soils",
+      "Reddish Brown Earths",
+      "Low Humic Gley Soils",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Regosols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -844,15 +1005,18 @@
       "Vavuniya"
     ],
     "harvestType": "short",
-    "harvestDays": 30,
+    "harvestDays": 37,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast leafy green (mukunuwenna/amaranth), 25-35 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate, Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-variety-leafy-vegetables: HORDI Thampala (Amaranthus, the botanical match for red spinach), \"Harvest 35-40 days after planting.\" Value corrected from 30 (which had been based on the DIFFERENT leafy green mukunuwenna, ~28 days) to the verified 35-40 day midpoint for the correct species. [SOIL-VALIDATED 2026-09] amaranthus/thampala is an adaptable, moisture-tolerant leafy green (Bog and Half-Bog Soils and Low Humic Gley Soils retained -- judgment call, recommend human review), but salinity and heavy cracking clay are genuinely unsuited; removed Solodized Solonetz and Grumusols."
   },
   {
     "crop": "Rose Apple",
     "soilTypes": [
-      "Loam",
-      "Clay Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Bog and Half-Bog Soils",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -868,15 +1032,17 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 75,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] fast-maturing among tree fruits, ~60-90 days from flowering."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] fast-maturing among tree fruits, ~60-90 days from flowering. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] rose apple (Syzygium) is more flood/moisture-tolerant than most fruit trees and is commonly found growing near streams and in seasonally wet ground; existing soilTypes list (including Bog and Half-Bog Soils) retained unchanged -- judgment call, recommend human review."
   },
   {
     "crop": "Soursop",
     "soilTypes": [
-      "Sandy Loam",
-      "Loam"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -892,15 +1058,18 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 135,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] ~4-5 months from fruit set to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] ~4-5 months from fruit set to maturity. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] soursop prefers well-drained fertile soil and is sensitive to prolonged waterlogging; removed Bog and Half-Bog Soils (waterlogged/marshy)."
   },
   {
     "crop": "Taro",
     "soilTypes": [
-      "Clay Loam",
-      "Wet/Waterlogged Tolerant"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Bog and Half-Bog Soils",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -916,15 +1085,17 @@
       "Ratnapura"
     ],
     "harvestType": "long",
-    "harvestDays": 210,
+    "harvestDays": null,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] Kiri Ala corm crop, typically 6-7 months (180-210 days) to maturity."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-kiri-ala: \"Harvest at 8-10 month.\" Value corrected from a significantly understated earlier estimate of 210 days (6-7 months) to the verified 8-10 month (240-300 day) midpoint. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] taro (kiri ala) is a genuine wetland/marsh-tolerant tuber crop commonly grown in waterlogged or semi-aquatic conditions; existing soilTypes list (including Bog and Half-Bog Soils) is a correct fit for this crop and is retained unchanged."
   },
   {
     "crop": "Winged Bean",
     "soilTypes": [
-      "Loam",
-      "Moisture-Retentive"
+      "Red-Yellow Podzolic Soils",
+      "Reddish Brown Latosolic Soils",
+      "Immature Brown Loams",
+      "Reddish Brown Earths"
     ],
     "districts": [
       "Badulla",
@@ -942,13 +1113,21 @@
     "harvestType": "short",
     "harvestDays": 85,
     "category": "vegetable",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [DOA] doa.gov.lk/hordi-crop-winged-bean: recommended varieties 70-75 days, common local varieties 90-100 days."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Wet, Intermediate. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [DOA-VERIFIED 2026-09] doa.gov.lk/hordi-crop-winged-bean: \"First harvest of recommended varieties can be taken in 70-75 days\"; local varieties 90-100 days. Re-confirmed live; value unchanged (85 days). [SOIL-VALIDATED 2026-09] winged bean forms edible tuberous roots in addition to pods, which need reasonably drained soil to develop properly despite the plant's general tolerance of humid conditions; removed Bog and Half-Bog Soils (permanently waterlogged/marshy)."
   },
   {
     "crop": "Wood Apple",
     "soilTypes": [
-      "Sandy Loam",
-      "Poor/Dry Soils"
+      "Reddish Brown Earths",
+      "Low Humic Gley Soils",
+      "Non-Calcic Brown Soils",
+      "Red-Yellow Latosols",
+      "Alluvial Soils",
+      "Soils of the Old Alluvium",
+      "Solodized Solonetz",
+      "Regosols",
+      "Grumusols",
+      "Rendzinas"
     ],
     "districts": [
       "Ampara",
@@ -967,8 +1146,8 @@
       "Vavuniya"
     ],
     "harvestType": "long",
-    "harvestDays": 300,
+    "harvestDays": null,
     "category": "fruit",
-    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type preferences based on common horticultural texture requirements for this crop. Harvest timing: [gen] notably slow-ripening like Beli Fruit, ~10+ months."
+    "notes": "Suitable districts derived from Sri Lanka's Wet/Intermediate/Dry agro-climatic zone classification (Dept. of Agriculture, Sri Lanka), matched to this crop's typical growing zone(s): Dry. Soil type: ALL real Sri Lankan Great Soil Groups documented for this crop's zone(s) (not narrowed to one dominant group per zone). [FULL-14-BASIS, sourced 2026-09] Dry Zone groups: Reddish Brown Earths, Low Humic Gley Soils, Non-Calcic Brown Soils, Red-Yellow Latosols, Alluvial Soils, Soils of the Old Alluvium, Solodized Solonetz, Regosols, Grumusols, Rendzinas. Wet Zone groups: Red-Yellow Podzolic Soils, Reddish Brown Latosolic Soils, Immature Brown Loams, Bog and Half-Bog Soils. Intermediate Zone (a documented transition between Reddish Brown Earths and Red-Yellow Podzolic Soils) additionally carries Immature Brown Loams for the upcountry belt. A crop spanning more than one zone lists the union of those zones' groups. Soil classification: [ZONE-DERIVED, sourced 2026-09] Sri Lanka's district-level soil is not uniform, but this crop's zone(s) are dominated by the named Great Soil Group(s) above (Dept. of Agriculture / Land Use Division classification: Reddish Brown Earths dominate the Dry Zone; Red-Yellow Podzolic Soils dominate the Wet Zone and wetter Intermediate Zone; Immature Brown Loams is the documented soil group of the upcountry vegetable belt). DOA's own per-crop pages (e.g. hordi-crop-brinjal) describe soil by drainage/texture/pH rather than by Great Soil Group name -- that practical texture guidance is no longer stored here, only the broader zone-level Great Soil Group. Harvest timing: [gen] notably slow-ripening like Beli Fruit, ~10+ months. Harvest timing: not applicable (harvestDays is null). This crop is harvestType \"long\" (a perennial tree/vine); the recommendation engine lists long crops by district and soil suitability only and never computes a harvest date or a price/rainfall prediction for them, so a days-to-harvest figure would be unused metadata that could be misread as \"days from planting to first harvest\" (which for a real tree crop is actually one to several years, not months). [SOIL-VALIDATED 2026-09] wood apple (Limonia acidissima) is, like Beli Fruit, an unusually hardy Dry Zone tree documented to tolerate poor, gravelly, shallow, and saline-influenced soils; existing soilTypes list retained in full -- judgment call, recommend human review."
   }
 ]
