@@ -3,5 +3,9 @@ node_modules
 __pycache__/
 *.pyc
 backend/models/*.joblib
+backend/models/weather/
 frontend/dist/
 data/dataset.csv
+*.log
+frontend/.vite/
+~$*.xlsx
