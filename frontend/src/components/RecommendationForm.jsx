@@ -1,12 +1,15 @@
 import React from "react";
 
-const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
-];
+function todayIsoDate() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+}
 
 export default function RecommendationForm({
-  districts, crops, district, setDistrict, month, setMonth,
+  districts, crops, district, setDistrict, plantingDate, setPlantingDate,
   selectedCrops, setSelectedCrops, lang, setLang, onSubmit, loading,
 }) {
   const toggleCrop = (crop) => {
@@ -25,12 +28,12 @@ export default function RecommendationForm({
     >
       <h2 className="mb-5 flex items-center gap-2 text-xl font-semibold text-ink">
         <span className="inline-block h-5 w-1.5 rounded-full bg-leaf" />
-        Build your recommendation
+        {lang === "si" ? "ඔබේ නිර්දේශය ලබාගන්න " : "Build your recommendation"}
       </h2>
 
       <div className="grid gap-4 md:grid-cols-3">
         <label className="flex flex-col gap-2 text-sm text-ink/60">
-          <span className="text-ink/70">District</span>
+          <span className="text-ink/70">{lang === "si" ? "දිස්ත්‍රික්කය" : "District / දිස්ත්‍රික්කය"}</span>
           <select
             className="rounded-2xl border border-leaf/15 bg-cream px-3 py-2.5 text-ink outline-none transition-colors focus:border-leaf focus:ring-2 focus:ring-leaf/20"
             value={district}
@@ -43,20 +46,18 @@ export default function RecommendationForm({
         </label>
 
         <label className="flex flex-col gap-2 text-sm text-ink/60">
-          <span className="text-ink/70">Month</span>
-          <select
+          <span className="text-ink/70">{lang === "si" ? "සිටුවන දිනය" : "Planting date / සිටුවන දිනය"}</span>
+          <input
+            type="date"
             className="rounded-2xl border border-leaf/15 bg-cream px-3 py-2.5 text-ink outline-none transition-colors focus:border-leaf focus:ring-2 focus:ring-leaf/20"
-            value={month}
-            onChange={(e) => setMonth(Number(e.target.value))}
-          >
-            {MONTHS.map((m, i) => (
-              <option key={m} value={i + 1}>{m}</option>
-            ))}
-          </select>
+            value={plantingDate}
+            min={todayIsoDate()}
+            onChange={(e) => setPlantingDate(e.target.value)}
+          />
         </label>
 
         <label className="flex flex-col gap-2 text-sm text-ink/60">
-          <span className="text-ink/70">Language / භාෂාව</span>
+          <span className="text-ink/70">{lang === "si" ? "භාෂාව" : "Language / භාෂාව"}</span>
           <select
             className="rounded-2xl border border-leaf/15 bg-cream px-3 py-2.5 text-ink outline-none transition-colors focus:border-leaf focus:ring-2 focus:ring-leaf/20"
             value={lang}
@@ -70,9 +71,13 @@ export default function RecommendationForm({
 
       <div className="mt-7">
         <span className="text-sm font-medium text-ink/70">
-          Candidate crops (leave empty to consider all crops)
+          {lang === "si" ? "අපේක්ෂිත බෝග (සියලු බෝග බලාපොරොත්තු වන්නේ නම් හිස්ව තබන්න)" : "Candidate crops (leave empty to consider all crops)"}
         </span>
-        <p className="mt-1 text-sm text-ink/40">Choose a few crops to compare or leave the selection open for a broader view.</p>
+        <p className="mt-1 text-sm text-ink/40">
+          {lang === "si"
+            ? "සාපේක්ෂා කිරීමට කුඩා බෝග කිහිපයක් තෝරන්න හෝ පුළුල් දර්ශනයක් සඳහා තේරීම හිස්ව තබන්න."
+            : "Choose a few crops to compare or leave the selection open for a broader view."}
+        </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {crops.map((c) => (
             <button
@@ -94,7 +99,9 @@ export default function RecommendationForm({
         className="mt-7 rounded-full bg-leaf px-5 py-2.5 font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-leaf-dark hover:shadow-md disabled:cursor-not-allowed disabled:translate-y-0 disabled:opacity-70 disabled:shadow-none"
         disabled={loading}
       >
-        {loading ? "Analyzing your options..." : "Generate Recommendations"}
+        {loading
+          ? lang === "si" ? "රැදීසිටින්න  ..." : "Analyzing your options..."
+          : lang === "si" ? "නිර්දේශ ලබාදෙන්න" : "Generate Recommendations"}
       </button>
     </form>
   );

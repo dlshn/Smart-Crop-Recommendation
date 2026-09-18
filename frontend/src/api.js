@@ -12,11 +12,22 @@ export async function fetchCrops() {
   return res.json();
 }
 
-export async function fetchRecommendations({ district, month, crops, lang = "en" }) {
+export async function fetchRainfallForecast(district, plantingDate) {
+  const res = await fetch(
+    `${API_BASE}/rainfall-forecast?district=${encodeURIComponent(district)}&plantingDate=${encodeURIComponent(plantingDate)}`
+  );
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error || "Failed to fetch rainfall forecast");
+  }
+  return res.json();
+}
+
+export async function fetchRecommendations({ district, plantingDate, crops, lang = "en" }) {
   const res = await fetch(`${API_BASE}/recommend`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ district, month, crops, lang }),
+    body: JSON.stringify({ district, plantingDate, crops, lang }),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));

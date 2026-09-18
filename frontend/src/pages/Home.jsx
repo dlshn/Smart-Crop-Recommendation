@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from "react";
 import RecommendationForm from "../components/RecommendationForm.jsx";
 import ResultCard from "../components/ResultCard.jsx";
-import { getCropName } from "../translations";
-import { fetchDistricts, fetchCrops, fetchRecommendations } from "../api.js";
+import RainfallChart from "../components/RainfallChart.jsx";
+import { getCropName, getSoilName, t } from "../translations";
+import { fetchDistricts, fetchCrops, fetchRecommendations, fetchRainfallForecast } from "../api.js";
 
 export default function Home() {
   const [districts, setDistricts] = useState([]);
   const [crops, setCrops] = useState([]);
   const [district, setDistrict] = useState("");
-  const [month, setMonth] = useState(new Date().getMonth() + 1);
+  const [plantingDate, setPlantingDate] = useState(() => {
+    const now = new Date();
+    const yyyy = now.getFullYear();
+    const mm = String(now.getMonth() + 1).padStart(2, "0");
+    const dd = String(now.getDate()).padStart(2, "0");
+    return `${yyyy}-${mm}-${dd}`;
+  });
   const [selectedCrops, setSelectedCrops] = useState([]);
   const [lang, setLang] = useState("en");
   const [results, setResults] = useState(null);
   const [longTerm, setLongTerm] = useState(null);
-  const [meanPrice, setMeanPrice] = useState(null);
+  const [rainfallTrend, setRainfallTrend] = useState(null);
+  const [rainfallDistrict, setRainfallDistrict] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [metaError, setMetaError] = useState(null);
@@ -34,18 +42,25 @@ export default function Home() {
     try {
       const data = await fetchRecommendations({
         district,
-        month,
+        plantingDate,
         crops: selectedCrops,
         lang,
       });
       setResults(data.recommendations);
       setLongTerm(data.longTermCrops);
-      setMeanPrice(data.meanPrice);
+      setRainfallDistrict(district);
+
+      try {
+        const forecast = await fetchRainfallForecast(district, plantingDate);
+        setRainfallTrend(forecast.trend);
+      } catch {
+        setRainfallTrend(null);
+      }
     } catch (err) {
       setError(err.message);
       setResults(null);
       setLongTerm(null);
-      setMeanPrice(null);
+      setRainfallTrend(null);
     } finally {
       setLoading(false);
     }
@@ -63,20 +78,6 @@ export default function Home() {
 
             </p>
           </div>
-          {/* <div className="flex flex-wrap gap-3">
-            <div className="min-w-[104px] rounded-xl border border-leaf/20 bg-leaf/10 px-4 py-3 text-center transition-transform duration-200 hover:-translate-y-0.5">
-              <strong className="block text-xl text-leaf">37</strong>
-              <span className="text-xs text-ink/50">Crops</span>
-            </div>
-            <div className="min-w-[104px] rounded-xl border border-leaf/20 bg-leaf/10 px-4 py-3 text-center transition-transform duration-200 hover:-translate-y-0.5">
-              <strong className="block text-xl text-leaf">25</strong>
-              <span className="text-xs text-ink/50">Districts</span>
-            </div>
-            <div className="min-w-[104px] rounded-xl border border-leaf/20 bg-leaf/10 px-4 py-3 text-center transition-transform duration-200 hover:-translate-y-0.5">
-              <strong className="block text-xl text-leaf">ML</strong>
-              <span className="text-xs text-ink/50">Price & Rainfall</span>
-            </div>
-          </div> */}
         </div>
       </header>
 
@@ -93,8 +94,8 @@ export default function Home() {
           crops={crops}
           district={district}
           setDistrict={setDistrict}
-          month={month}
-          setMonth={setMonth}
+          plantingDate={plantingDate}
+          setPlantingDate={setPlantingDate}
           selectedCrops={selectedCrops}
           setSelectedCrops={setSelectedCrops}
           lang={lang}
@@ -106,18 +107,31 @@ export default function Home() {
 
       {error && <div className="rounded-2xl border border-rose-300 bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</div>}
 
+      {rainfallTrend && rainfallDistrict && (
+        <RainfallChart trend={rainfallTrend} district={rainfallDistrict} lang={lang} />
+      )}
+
       {results && (
         <section className="rounded-none border border-leaf/15 bg-white p-7 shadow-soft transition-shadow duration-300 hover:shadow-lg">
           <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="flex items-center gap-2 text-xl font-semibold text-ink">
                 <span className="inline-block h-5 w-1.5 rounded-full bg-leaf" />
-                Recommended profitable crops for <b>{district}</b>
+                {lang === "si" ? (
+                  <>
+                    <span>{t("recommendedProfitableCropsFor", lang)}</span>
+                    <span> - {t("districtLabel", lang)}</span>
+                    <b> {district}</b>
+                  </>
+                ) : (
+                  <>
+                    {t("recommendedProfitableCropsFor", lang)} <b>{district}</b>
+                  </>
+                )}
               </h2>
-              {/* <p className="mt-1 text-sm text-ink/60">Mean predicted harvest price: LKR {meanPrice}</p> */}
             </div>
             <div className="whitespace-nowrap rounded-full border border-leaf/20 bg-leaf/10 px-3 py-2 text-sm text-leaf">
-              Ranked by predicted gain
+              {t("rankedByPredictedGain", lang)}
             </div>
           </div>
           {results.length === 0 ? (
@@ -136,7 +150,7 @@ export default function Home() {
         <section className="rounded-none border border-leaf/15 bg-white p-7 shadow-soft transition-shadow duration-300 hover:shadow-lg">
           <h2 className="mb-5 flex items-center gap-2 text-xl font-semibold text-ink">
             <span className="inline-block h-5 w-1.5 rounded-full bg-leaf" />
-            Long-term crop recommendations
+            {t("longTermCropRecommendations", lang)}
           </h2>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {longTerm.map((item) => (
@@ -148,15 +162,12 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-ink">
                   {lang === "si" ? `${getCropName(item.crop, "si")} (${item.crop})` : item.crop}
                 </h3>
-                {/* <p className="mt-2 text-sm leading-6 text-ink/60">{item.notes}</p> */}
                 <div className="mt-4 grid grid-cols-1 gap-3">
-                  {/* <div className="rounded-xl border border-leaf/10 bg-white p-3">
-                    <div className="text-[11px] uppercase tracking-[0.2em] text-ink/40">Harvest days</div>
-                    <div className="mt-1 text-sm font-semibold text-ink/80">{item.harvestDays}</div>
-                  </div> */}
                   <div className="rounded-xl border border-leaf/10 bg-white p-3">
                     <div className="text-[11px] uppercase tracking-[0.2em] text-ink/40">Soil</div>
-                    <div className="mt-1 text-sm font-semibold text-ink/80">{item.suitableSoilTypes.join(", ")}</div>
+                    <div className="mt-1 text-sm font-semibold text-ink/80">
+                      {item.suitableSoilTypes.map((s) => getSoilName(s, lang)).join(" | ")}
+                    </div>
                   </div>
                 </div>
               </div>
