@@ -1,5 +1,6 @@
 import React from "react";
-import { getCropName } from "../translations";
+import { getCropName, getSoilName } from "../translations";
+import GrowingPeriodRainfallChart from "./GrowingPeriodRainfallChart.jsx";
 
 export default function ResultCard({ result, rank, lang }) {
   const cropDisplay =
@@ -10,7 +11,7 @@ export default function ResultCard({ result, rank, lang }) {
   const price = typeof result?.predictedPriceLkr === "number" ? result.predictedPriceLkr : null;
   const soils =
     Array.isArray(result?.suitableSoilTypes) && result.suitableSoilTypes.length > 0
-      ? result.suitableSoilTypes.join(", ")
+      ? result.suitableSoilTypes.map((s) => getSoilName(s, lang)).join(" | ")
       : "-";
 
   return (
@@ -35,8 +36,7 @@ export default function ResultCard({ result, rank, lang }) {
         </div>
 
         <div className="rounded-2xl border border-leaf/10 bg-cream p-3">
-          <div className="text-[11px] uppercase tracking-[0.2em] text-ink/40">Rainfall idea within growing period</div>
-          <div className="mt-1 text-sm font-semibold text-ink/80">{result?.rainfallIdea ?? "-"}</div>
+          <GrowingPeriodRainfallChart breakdown={result?.rainfallBreakdown} />
         </div>
       </div>
     </div>
